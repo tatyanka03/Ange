@@ -8,6 +8,11 @@ function addToCart(button) {
     var size = button.getAttribute('data-size');
     var price = parseFloat(button.getAttribute('data-price'));
     var quantity = 1;
+    
+    if (!size) {
+    alert('Пожалуйста, выберите размер.');
+    return;
+    }
 
     var item = {
         id: id,
